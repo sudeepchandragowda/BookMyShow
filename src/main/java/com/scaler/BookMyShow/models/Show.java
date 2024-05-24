@@ -17,6 +17,7 @@ public class Show extends BaseModel{
     private Date endTime;
     @OneToMany
     private List<ShowSeat> showSeats;
+    @ManyToOne
     private Screen screen;
     @Enumerated(EnumType.ORDINAL)
     @ElementCollection
