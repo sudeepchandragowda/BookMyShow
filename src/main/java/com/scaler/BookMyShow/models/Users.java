@@ -10,9 +10,10 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class User extends BaseModel{
+public class Users extends BaseModel{
     private String name;
     private String email;
+    private String password;
     @OneToMany
     private List<Ticket> tickets;
 }
