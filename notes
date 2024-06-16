@@ -11,3 +11,6 @@ spring.jpa.hibernate.ddl-auto=update || create || verify
 update -> everytime we run the system, only new changes are updated
 create -> everytime we run this system, drop all the tables and then re-create them with current changes
 verify -> verify whether the DB has required tables and columns as per entities
+
+For all dependent objects -> we use annotation called @Component
+but if they also do something -> @Repository, @Service
