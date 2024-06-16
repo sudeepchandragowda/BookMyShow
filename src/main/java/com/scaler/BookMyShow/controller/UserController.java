@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 public class UserController {
     @Autowired
     private UserService userService;
-    public UserSignUpResponseDTO signUo(UserSignUpRequestDTO userSignUpRequestDTO){
+    public UserSignUpResponseDTO signUp(UserSignUpRequestDTO userSignUpRequestDTO){
 
     }
 }
