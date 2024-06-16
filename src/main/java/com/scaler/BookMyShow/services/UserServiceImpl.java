@@ -1,6 +1,7 @@
 package com.scaler.BookMyShow.services;
 
 import com.scaler.BookMyShow.exception.InvalidCredentialsException;
+import com.scaler.BookMyShow.exception.UserAlreadyExistsException;
 import com.scaler.BookMyShow.exception.UserNotFoundException;
 import com.scaler.BookMyShow.models.Users;
 import com.scaler.BookMyShow.repository.UserRepository;
@@ -28,6 +29,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users signUp(String name, String email, String password) {
-        return null;
-    }
+        Optional<Users> usersOptional = userRepository.findByEmail(email);
+        if (usersOptional.isPresent()) {
+            throw new UserAlreadyExistsException("User with given email is already present");
+        }
+        Users newUser = new Users();
+        newUser.setPassword(password);
+        newUser.setName(name);
+        newUser.setEmail(email);
+        return userRepository.save(newUser);
+        }
 }
