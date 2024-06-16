@@ -14,3 +14,6 @@ verify -> verify whether the DB has required tables and columns as per entities
 
 For all dependent objects -> we use annotation called @Component
 but if they also do something -> @Repository, @Service
+
+For controllers which supports RestAPIs -> @RestController
+For simple controllers which does not support RESTAPIs -> @Controller
