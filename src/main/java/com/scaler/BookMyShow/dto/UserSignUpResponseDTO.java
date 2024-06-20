@@ -8,5 +8,7 @@ public class UserSignUpResponseDTO {
     private Long id;
     private String name;
     private String email;
+    private String responseCode;
+    private String responseMessage;
     private List<Ticket> tickets; // TODO: change ticket to TicketResponseDTO
 }
