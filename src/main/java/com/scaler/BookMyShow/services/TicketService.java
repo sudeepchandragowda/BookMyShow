@@ -7,5 +7,5 @@ import java.util.List;
 public interface TicketService {
     Ticket bookTicket(Long userId, List<Long> showSeatIds, Long showId);
     Ticket cancelTicket(Long ticketId);
-    Ticket transferTicket(Long fromUserId, Long toUserId);
+    Ticket transferTicket(Long ticketId, Long fromUserId, Long toUserId);
 }
