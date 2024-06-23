@@ -20,3 +20,15 @@ For simple controllers which does not support RESTAPIs -> @Controller
 
 DTOs are supposed to be used for Controller layer only, service and repository layer should not deal with
 DTOs, they should only deal with internal models.
+
+User 1:M -> ticket
+
+1 user
+<1,2,3,4,5>
+
+B user
+5
+
+Ticket table
+ticketId, userId
+B           5
