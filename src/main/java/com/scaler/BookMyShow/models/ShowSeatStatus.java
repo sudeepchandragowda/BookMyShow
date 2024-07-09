@@ -6,3 +6,5 @@ public enum ShowSeatStatus {
     BOOKED,
     LOCKED
 }
+
+// Required to add lock to the showSeatStatus.
