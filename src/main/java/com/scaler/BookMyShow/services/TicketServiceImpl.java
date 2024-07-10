@@ -47,6 +47,7 @@ public class TicketServiceImpl implements TicketService {
            showSeatRepository.save(showSeat);
         }
 
+        //remove this update -> Locked to Booked into a different method
         boolean paymentDone = paymentCheck();
         List<ShowSeat> showSeats = new ArrayList<>();
         double amount = 0;

@@ -33,4 +33,15 @@ Ticket table
 ticketId, userId
 B           5
 
--> Controller to be updated.
+Ideal ->
+Controller -> service -> repository
+                |
+              service
+
+TicketController -> TicketService -> TicketRepository
+                        |
+                   ShowSeatService/UserService
+
+* Controller cannot talk to another controller
+* Repository cannot talk to another repository
+* Service can talk to another service
